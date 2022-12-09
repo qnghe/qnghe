@@ -1,0 +1,45 @@
+.juejin-list {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px);
+  grid-auto-flow: row;
+  justify-content: center;
+  gap: 8px 8px;
+  .juejin-item {
+    border: 1px solid #dadada;
+    cursor: pointer;
+    & > span {
+      padding: 16px;
+      display: inline-block;
+      position: relative;
+    }
+    .byte-tooltip {
+      display: none;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+      opacity: 0;
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+    &:hover {
+      .byte-tooltip {
+        display: inline-block;
+        opacity: 1;
+      }
+    }
+    .image {
+      width: 36px;
+      vertical-align: middle;
+    }
+    
+  }
+  .byte-tooltip__wrapper {
+    display: inline-block;
+  }
+}
